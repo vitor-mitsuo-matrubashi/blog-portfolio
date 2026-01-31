@@ -1,0 +1,95 @@
+---
+title: "Scientific Calculator"
+description: "A beginner-friendly full-stack project to learn React, TypeScript, Python, and FastAPI by building a scientific calculator from scratch."
+technologies: ["React", "TypeScript", "Python", "FastAPI"]
+github: "https://github.com/vitor-mitsuo-matrubashi/scientific-calculador"
+image: "https://raw.githubusercontent.com/vitor-mitsuo-matrubashi/scientific-calculador/main/preview.PNG"
+order: 2
+status: "completed"
+relatedPost: "building-scientific-calculator"
+---
+
+# 🧮 Scientific Calculator
+
+A beginner-friendly full-stack project to learn React, TypeScript, Python, and FastAPI by building a scientific calculator from scratch.
+
+## 🎯 Purpose
+
+This is a learning project designed to help beginners understand:
+
+- ⚛️ React fundamentals (components, hooks, state management)
+- 🔷 TypeScript basics (types, interfaces)
+- 🐍 Python backend development
+- ⚡ FastAPI for building REST APIs
+- 🔗 Frontend-Backend communication (HTTP requests, CORS)
+- 🎨 CSS styling (Grid, Flexbox)
+
+Every file contains detailed comments explaining what each piece of code does and why. Perfect for self-learning or teaching others!
+
+## ✨ Features
+
+### Calculator Operations
+
+- ✅ Basic arithmetic (+, −, ×, ÷)
+- ✅ Scientific functions (sin, cos, tan, √, xʸ, ln, log₁₀)
+- ✅ Constants (π)
+- ✅ Clear and backspace
+
+### Learning Features
+
+- 📝 Heavily commented code - Every file explains concepts in detail
+- 🎓 Step-by-step TODOs - Follow guided implementation hints
+- 📚 LEARN.md - Comprehensive guide explaining all concepts
+- ⌨️ Keyboard support - Full keyboard input (great for learning event handling!)
+
+## 🏗️ Project Structure
+
+```
+scientific-calculator/
+│
+├── backend/                    # Python API (FastAPI)
+│   ├── app/
+│   │   ├── main.py            # FastAPI app & CORS config
+│   │   ├── api/
+│   │   │   └── calculations.py # API endpoints
+│   │   └── core/
+│   │       └── calculator.py  # Math logic (pure Python)
+│   └── tests/
+│       └── test_calculator.py # Unit tests (pytest)
+│
+├── frontend/                   # React UI (TypeScript)
+│   ├── src/
+│   │   ├── App.tsx            # Root component
+│   │   ├── components/
+│   │   │   ├── Calculator.tsx # Main calculator UI
+│   │   │   └── Display.tsx    # Display component
+│   │   ├── hooks/
+│   │   │   └── useCalculator.ts # State & logic hook
+│   │   └── styles/
+│   │       └── app.css        # Styling
+│   └── package.json
+│
+├── LEARN.md                    # 📚 Complete learning guide
+└── README.md
+```
+
+## ⌨️ Keyboard Shortcuts
+
+| Key | Action |
+|-----|--------|
+| 0-9 | Input digit |
+| . | Decimal point |
+| + - * / | Operators |
+| Enter | Calculate |
+| Escape | Clear all |
+| Backspace | Delete last digit |
+
+## What I Learned
+
+Building this project taught me about:
+
+1. Full-stack development with React and FastAPI
+2. TypeScript for type-safe frontend code
+3. REST API design and CORS configuration
+4. React hooks and state management
+5. Event handling and keyboard interactions

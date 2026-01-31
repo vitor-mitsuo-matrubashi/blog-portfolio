@@ -1,0 +1,101 @@
+---
+title: "Learning React: From Zero to Portfolio"
+date: "2026-01-20"
+description: "My journey learning React.js from scratch. What resources I used, mistakes I made, and how I eventually built this portfolio site."
+tags: ["programming", "react", "javascript"]
+---
+
+# My React Learning Journey
+
+When I decided to build this portfolio website, I knew I wanted to use React. But I had never used it before. This post documents my learning journey.
+
+## Why React?
+
+I chose React because:
+
+- It's widely used in the industry
+- Component-based architecture makes sense to me
+- Large community and ecosystem
+- Skills transfer to React Native for mobile development
+
+## Resources I Used
+
+### Free Resources
+
+1. **React Documentation** - The new React docs are excellent
+2. **FreeCodeCamp** - Great for fundamentals
+3. **YouTube tutorials** - Visual learning helps
+
+### Paid Resources
+
+1. **Udemy courses** - Comprehensive but can be outdated
+2. **Frontend Masters** - High quality content
+
+## The Learning Path
+
+### Week 1-2: JavaScript Fundamentals
+
+Before diving into React, I made sure I understood:
+
+- ES6+ syntax (arrow functions, destructuring, spread operator)
+- Array methods (map, filter, reduce)
+- Async/await and Promises
+
+### Week 3-4: React Basics
+
+I started with the fundamentals:
+
+```jsx
+// My first React component
+function Welcome({ name }) {
+  return <h1>Hello, {name}!</h1>;
+}
+```
+
+Understanding JSX was the first hurdle. It's not HTML, but it looks like it!
+
+### Week 5-6: State and Effects
+
+The `useState` hook became my best friend:
+
+```jsx
+import { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+  
+  return (
+    <button onClick={() => setCount(count + 1)}>
+      Clicked {count} times
+    </button>
+  );
+}
+```
+
+## Common Mistakes I Made
+
+1. **Mutating state directly** - Always use the setter function!
+2. **Missing key props** - React needs keys for list items
+3. **Overusing state** - Not everything needs to be state
+4. **Not reading error messages** - They're actually helpful!
+
+## Building the Portfolio
+
+After 6 weeks of learning, I felt ready to build this portfolio. I chose:
+
+- **Next.js** - React framework with great features
+- **Tailwind CSS** - Utility-first styling
+- **Framer Motion** - Smooth animations
+
+## Tips for Beginners
+
+1. **Build projects** - Tutorial hell is real. Build things!
+2. **Read documentation** - It's often better than tutorials
+3. **Join communities** - Discord servers and Reddit are helpful
+4. **Be patient** - Learning takes time
+
+## Conclusion
+
+Learning React was challenging but rewarding. The key is consistent practice and building real projects. This portfolio is proof that you can learn and create something meaningful!
+
+What are you learning right now? Let me know in the comments!

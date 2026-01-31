@@ -1,0 +1,175 @@
+---
+title: "Building a Scientific Calculator to Learn React"
+date: "2026-01-25"
+description: "How I built a full-stack scientific calculator from scratch to learn React, TypeScript, Python, and FastAPI through hands-on practice."
+tags: ["React", "TypeScript", "Python", "FastAPI", "Learning"]
+image: "https://raw.githubusercontent.com/vitor-mitsuo-matrubashi/scientific-calculador/main/preview.PNG"
+---
+
+# Building a Scientific Calculator to Learn React
+
+When I decided to learn React, I knew I needed a project that was **simple enough to understand** but **complex enough to teach real concepts**. That's when I decided to build a scientific calculator from scratch.
+
+## Why a Calculator?
+
+A calculator is the perfect learning project because:
+
+1. **Clear scope** - Everyone knows what a calculator should do
+2. **Incremental complexity** - Start with basic math, add scientific functions later
+3. **Visual feedback** - You see results immediately
+4. **Full-stack opportunity** - Can add a backend for complex calculations
+
+## The Tech Stack
+
+I chose technologies that are widely used in the industry:
+
+- **Frontend**: React with TypeScript
+- **Backend**: Python with FastAPI
+- **Styling**: CSS Grid and Flexbox
+
+### Why TypeScript?
+
+TypeScript adds type safety to JavaScript. Instead of discovering bugs at runtime, the compiler catches them while you code:
+
+```typescript
+// Without TypeScript - bug discovered at runtime
+function add(a, b) {
+  return a + b;
+}
+add("5", 3); // Returns "53" instead of 8!
+
+// With TypeScript - bug caught immediately
+function add(a: number, b: number): number {
+  return a + b;
+}
+add("5", 3); // Error: Argument of type 'string' is not assignable
+```
+
+### Why FastAPI?
+
+I wanted to learn how frontend and backend communicate. FastAPI is:
+
+- **Fast** to write and run
+- **Easy** to understand
+- **Well documented**
+- **Type-safe** with Python type hints
+
+## Key Concepts I Learned
+
+### 1. React Components
+
+Everything in React is a component. The calculator has:
+
+- `Calculator.tsx` - Main container
+- `Display.tsx` - Shows the current number/result
+- `Button.tsx` - Each calculator button
+
+### 2. React Hooks
+
+Hooks let you use state and other React features:
+
+```tsx
+// useState - Store and update values
+const [display, setDisplay] = useState("0");
+
+// useCallback - Memoize functions
+const handleClick = useCallback((value: string) => {
+  setDisplay(prev => prev + value);
+}, []);
+```
+
+### 3. Custom Hooks
+
+I created `useCalculator.ts` to separate logic from UI:
+
+```tsx
+function useCalculator() {
+  const [display, setDisplay] = useState("0");
+  const [memory, setMemory] = useState<number | null>(null);
+  
+  const calculate = () => { /* math logic */ };
+  const clear = () => setDisplay("0");
+  
+  return { display, calculate, clear };
+}
+```
+
+### 4. API Communication
+
+The frontend sends calculation requests to the backend:
+
+```tsx
+const result = await fetch("http://localhost:8000/calculate", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ expression: "sin(45)" }),
+});
+```
+
+### 5. CORS Configuration
+
+Browsers block requests between different origins. FastAPI needs CORS middleware:
+
+```python
+from fastapi.middleware.cors import CORSMiddleware
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000"],
+    allow_methods=["*"],
+)
+```
+
+## Challenges I Faced
+
+### Keyboard Support
+
+Adding keyboard support taught me about event listeners:
+
+```tsx
+useEffect(() => {
+  const handleKeyDown = (e: KeyboardEvent) => {
+    if (e.key >= "0" && e.key <= "9") {
+      addDigit(e.key);
+    } else if (e.key === "Enter") {
+      calculate();
+    }
+  };
+  
+  window.addEventListener("keydown", handleKeyDown);
+  return () => window.removeEventListener("keydown", handleKeyDown);
+}, []);
+```
+
+### State Management
+
+Keeping track of:
+- Current display value
+- Previous operand
+- Selected operator
+- Whether to clear on next input
+
+This taught me to think carefully about **what state is needed** and **when it should change**.
+
+## What's Next?
+
+Now that I understand the basics, I want to:
+
+1. Add more scientific functions (factorial, logarithms)
+2. Implement calculation history
+3. Add unit conversions
+4. Create a mobile-responsive design
+
+## Conclusion
+
+Building a calculator might seem simple, but it touches on **every fundamental concept** in React:
+
+- Components and props
+- State management with hooks
+- Event handling
+- API integration
+- Styling with CSS
+
+If you're learning React, I highly recommend building something hands-on. The code is available on [GitHub](https://github.com/vitor-mitsuo-matrubashi/scientific-calculador) with detailed comments explaining every concept.
+
+**The best way to learn is by doing!** 🚀
