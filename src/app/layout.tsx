@@ -61,10 +61,10 @@ const notoSansKR = Noto_Sans_KR({
 export const metadata: Metadata = {
   // Default page title (shown in browser tab)
   title: {
-    default: "My Portfolio | Developer Blog",
+    default: "Vitor Mitsuo | Developer Blog",
     // Template for page-specific titles
     // %s is replaced with the page's title
-    template: "%s | My Portfolio",
+    template: "%s | Vitor Mitsuo",
   },
 
   // Site description for search engines
@@ -83,7 +83,7 @@ export const metadata: Metadata = {
   ],
 
   // Author information
-  authors: [{ name: "Your Name" }],
+  authors: [{ name: "Vitor Mitsuo Matrubashi" }],
 
   // Canonical URL (replace with your actual domain)
   metadataBase: new URL("https://your-domain.com"),
@@ -92,8 +92,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    siteName: "My Portfolio",
-    title: "My Portfolio | Developer Blog",
+    siteName: "Vitor Mitsuo",
+    title: "Vitor Mitsuo | Developer Blog",
     description:
       "Personal portfolio and blog about programming, data science, and finance.",
   },
@@ -101,7 +101,7 @@ export const metadata: Metadata = {
   // Twitter card metadata
   twitter: {
     card: "summary_large_image",
-    title: "My Portfolio | Developer Blog",
+    title: "Vitor Mitsuo | Developer Blog",
     description:
       "Personal portfolio and blog about programming, data science, and finance.",
   },
