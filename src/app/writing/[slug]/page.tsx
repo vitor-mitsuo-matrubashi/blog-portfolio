@@ -161,18 +161,13 @@ export default async function WritingPostPage({ params }: PageProps) {
           ==================================== */}
       <AnimatedSection className="mt-12 pt-8 border-t border-border" delay={0.3}>
         {/* Share/Navigation Section */}
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+        <div className="flex justify-start">
           <Link
             href="/writing"
             className="text-muted hover:text-accent transition-colors"
           >
             ← Back to all posts
           </Link>
-
-          {/* You could add social share buttons here */}
-          <div className="text-sm text-muted">
-            Thanks for reading! 🙏
-          </div>
         </div>
       </AnimatedSection>
     </article>
