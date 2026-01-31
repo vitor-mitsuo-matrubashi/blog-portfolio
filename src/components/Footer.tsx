@@ -122,13 +122,6 @@ export default function Footer() {
               {currentYear} inserts the JavaScript variable into the JSX
               Curly braces {} are used to embed JavaScript in JSX
             */}
-            <span>•</span>
-            <span className="flex items-center gap-1">
-              Built with
-              {/* Heart icon with accent color */}
-              <Heart size={14} className="text-accent fill-accent" />
-              {/* fill-accent fills the heart with color (not just outline) */}
-            </span>
           </div>
 
           {/* ------------------------------------

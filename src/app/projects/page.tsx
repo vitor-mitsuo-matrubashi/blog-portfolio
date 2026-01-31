@@ -107,7 +107,7 @@ export default function ProjectsPage() {
             experiments that aren&apos;t listed here.
           </p>
           <a
-            href="https://github.com/YOUR_USERNAME"
+            href="https://github.com/vitor-mitsuo-matrubashi"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-accent hover:text-accent-hover transition-colors"
