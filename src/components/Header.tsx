@@ -48,7 +48,7 @@ const navigationItems: NavItem[] = [
   { label: "About", href: "/about" },
   { label: "Projects", href: "/projects" },
   { label: "Writing", href: "/writing" },
-  { label: "Polyglot", href: "/polyglot" },
+  { label: "Polyglot Notes", href: "/polyglot" },
 ];
 
 // ------------------------------------
