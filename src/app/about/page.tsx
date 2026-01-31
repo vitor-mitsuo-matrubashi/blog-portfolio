@@ -5,6 +5,7 @@
 // ===========================================
 
 import { Metadata } from "next";
+import Image from "next/image";
 import { AnimatedSection } from "@/components";
 import { Briefcase, GraduationCap, Heart, MapPin, Mail } from "lucide-react";
 // Icons for different sections:
@@ -114,20 +115,36 @@ export default function AboutPage() {
           HERO/INTRO SECTION
           ==================================== */}
       <AnimatedSection className="mb-16">
-        <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-          About Me
-        </h1>
+        {/* Profile Photo and Title */}
+        <div className="flex flex-col sm:flex-row items-start gap-6 mb-6">
+          {/* GitHub Profile Photo */}
+          <div className="relative w-32 h-32 rounded-full overflow-hidden border-2 border-accent shrink-0">
+            <Image
+              src="https://github.com/vitor-mitsuo-matrubashi.png"
+              alt="Vitor Mitsuo"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+          
+          <div>
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+              About Me
+            </h1>
 
-        {/* Personal Info */}
-        <div className="flex flex-wrap gap-4 text-muted mb-6">
-          <span className="inline-flex items-center gap-2">
-            <MapPin size={16} className="text-accent" />
-            Sao Paulo, Brazil
-          </span>
-          <span className="inline-flex items-center gap-2">
-            <Mail size={16} className="text-accent" />
-            matrubashimitsuo@gmail.com
-          </span>
+            {/* Personal Info */}
+            <div className="flex flex-wrap gap-4 text-muted">
+              <span className="inline-flex items-center gap-2">
+                <MapPin size={16} className="text-accent" />
+                Sao Paulo, Brazil
+              </span>
+              <span className="inline-flex items-center gap-2">
+                <Mail size={16} className="text-accent" />
+                matrubashimitsuo@gmail.com
+              </span>
+            </div>
+          </div>
         </div>
 
         {/* Bio Paragraphs */}
