@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- Background circle with dark theme -->
+  <circle cx="16" cy="16" r="16" fill="#0a0a0a"/>
+  
+  <!-- Bar chart representing data - using accent red color -->
+  <rect x="6" y="18" width="4" height="8" rx="1" fill="#dc2626"/>
+  <rect x="12" y="12" width="4" height="14" rx="1" fill="#dc2626"/>
+  <rect x="18" y="8" width="4" height="18" rx="1" fill="#dc2626"/>
+  <rect x="24" y="14" width="4" height="12" rx="1" fill="#dc2626"/>
+  
+  <!-- Subtle grid line -->
+  <line x1="4" y1="26" x2="30" y2="26" stroke="#333" stroke-width="1"/>
+</svg>
