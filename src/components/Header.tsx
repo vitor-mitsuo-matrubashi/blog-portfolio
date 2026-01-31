@@ -65,8 +65,8 @@ const headerVariants = {
     opacity: 1,
     // 'transition' controls how the animation plays
     transition: {
-      duration: 0.5,        // Animation takes 0.5 seconds
-      ease: "easeOut",      // Starts fast, ends slow (natural feel)
+      duration: 0.5,                // Animation takes 0.5 seconds
+      ease: "easeOut" as const,    // Starts fast, ends slow (natural feel)
     },
   },
 };

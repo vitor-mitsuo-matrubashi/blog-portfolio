@@ -51,9 +51,9 @@ const iconVariants = {
   hover: {
     scale: 1.2,
     transition: {
-      type: "spring",      // Spring physics animation
-      stiffness: 400,      // How "tight" the spring is
-      damping: 10,         // How quickly it settles
+      type: "spring" as const, // Spring physics animation
+      stiffness: 400,          // How "tight" the spring is
+      damping: 10,             // How quickly it settles
     },
   },
 };

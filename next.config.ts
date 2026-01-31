@@ -18,6 +18,9 @@ const nextConfig: NextConfig = {
   // Helps find potential problems in your React code
   reactStrictMode: true,
 
+  // Empty turbopack config to allow build with webpack (required for Contentlayer)
+  turbopack: {},
+
   // 'images' configures Next.js Image Optimization
   // We need to whitelist external image domains for security
   images: {

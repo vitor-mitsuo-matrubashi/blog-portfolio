@@ -71,7 +71,7 @@ export default function AnimatedSection({
       transition={{
         duration: 0.6,
         delay: delay,
-        ease: "easeOut",
+        ease: "easeOut" as const,
       }}
       className={className}
       // Passes through any additional classes from props

@@ -60,7 +60,7 @@ const cardVariants = {
     transition: {
       duration: 0.5,
       delay: index * 0.1, // Each card appears 0.1s after the previous
-      ease: "easeOut",
+      ease: "easeOut" as const,
     },
   }),
 };
