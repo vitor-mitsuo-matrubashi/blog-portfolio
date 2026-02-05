@@ -103,6 +103,7 @@ const skills = {
   tools: ["Git", "Docker", "VS Code", "Jupyter"],
   databases: ["PostgreSQL", "MongoDB", "Redis"],
   finance: ["Pricing", "Mark-to-Market (MTM)", "PnL Calculation"],
+  spoken_languages: ["Portuguese (BR)", "English", "Korean", "Japanese", "Spanish (learning)", "Libras (learning)"],
 };
 
 // ------------------------------------
