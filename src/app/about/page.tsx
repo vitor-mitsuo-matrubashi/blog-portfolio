@@ -98,8 +98,8 @@ const hobbies = [
 // List your technical skills
 // ------------------------------------
 const skills = {
-  languages: ["Python", "JavaScript", "TypeScript", "SQL"],
-  frameworks: ["React", "Next.js", "Node.js", "Pandas"],
+  languages: ["Python", "JavaScript", "TypeScript", "SQL", "Java"],
+  frameworks: ["React", "Next.js", "Node.js", "Pandas", "Spring Boot"],
   tools: ["Git", "Docker", "VS Code", "Jupyter"],
   databases: ["PostgreSQL", "MongoDB", "Redis"],
   finance: ["Pricing", "Mark-to-Market (MTM)", "PnL Calculation"],
